@@ -26,11 +26,13 @@
             })
         }
 
-        decrement=()=>{
+      decrement =()=>{
+        if(this.state.count>0){
             this.setState({
                 count:this.state.count-1
             })
         }
+      }
 
         render(){
             return(
@@ -42,6 +44,9 @@
             )
         }
      }
-     ReactDOM.render(<Counter/>,document.getElementById("root"));
+    //  ReactDOM.render(<Counter/>,document.getElementById("root"));
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<Counter/>);
 </script>
 </html>
